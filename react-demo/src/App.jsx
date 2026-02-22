@@ -1,31 +1,26 @@
-
-// here we create components for the app
-// rafce is a shortcut for react functional component
-// every component will return a JSX element 
-// it can return a single element or a fragment
-// fragment is an empty tag that can contain multiple elements
 import React from 'react'
-
+import NavBar from './components/nav-bar';
+import Hero from './components/hero';
+import HomeCards from './components/home-cards';
+import Jobs from './components/jobs';
+import ViewAllJobs from './components/viewAllJobs';
 const App = () => {
-  const name = 'John Doe'
-  const age = 20
-  const friends= ['John', 'Jane', 'Jim', 'Jill']
-  const isStudent = false
-
-  
   return (
-    <div className="text-blue-500">
-      <h1>Hello {name}</h1>
-      <p>You are {age} years old</p> 
-      <p>You have {friends.length} friends</p> 
-      <ul>
-        {friends.map((friend,index) => (
-          <li key={index}>{friend}</li>
-        ))}
-      </ul>
-      <p>You are a student: {isStudent ? 'Yes' : 'No'}</p>
-    </div>
-  )
-}
+    <div>
+          <NavBar />
 
-export default App
+    {/* Hero */}
+      <Hero title="Become a React Dev" subtitle="Find the React job that fits your skills and needs" />
+
+    {/* Developers and Employers */}
+    <HomeCards />
+
+    {/* Browse Jobs */}
+    <Jobs />
+<ViewAllJobs />
+
+    </div>
+  );
+};
+
+export default App;
