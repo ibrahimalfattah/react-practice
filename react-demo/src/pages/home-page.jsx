@@ -1,5 +1,4 @@
 import React from "react";
-import NavBar from "../components/nav-bar";
 import Hero from "../components/hero";
 import HomeCards from "../components/home-cards";
 import Jobs from "../components/jobs";
@@ -15,7 +14,7 @@ const HomePage = () => {
 
       <HomeCards />
 
-      <Jobs />
+      <Jobs isHome={true} />
       <ViewAllJobs />
     </div>
   );
